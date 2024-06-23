@@ -1,5 +1,10 @@
-type Props = {};
-const EmptyList = (props: Props) => {
-  return <div>EmptyList</div>;
+import { cn } from '@/lib/utils';
+
+type Props = {
+  heading?: string;
+  className?: string;
+};
+const EmptyList = ({ heading = 'No items found.', className }: Props) => {
+  return <h2 className={cn('text-xl', className)}>{heading}</h2>;
 };
 export default EmptyList;
